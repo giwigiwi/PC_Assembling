@@ -6,14 +6,14 @@ import org.slf4j.Logger;
 public class Hdd {
     private static Logger log = LoggerFactory.getLogger(Hdd.class.getName());
     private int power;
-    private String rotateSpeed;
+    private String spindleSpeed;
 
     public Hdd() {
     }
 
     public Hdd(int power, String rotateSpeed) {
         this.power = power;
-        this.rotateSpeed = rotateSpeed;
+        this.spindleSpeed = rotateSpeed;
     }
 
     public int getPower() {
@@ -24,11 +24,11 @@ public class Hdd {
         this.power = power;
     }
 
-    public String getRotateSpeed() {
-        return rotateSpeed;
+    public String getSpindleSpeed() {
+        return spindleSpeed;
     }
 
-    public void setRotateSpeed(String rotateSpeed) {
-        this.rotateSpeed = rotateSpeed;
+    public void setSpindleSpeed(String spindleSpeed) {
+        this.spindleSpeed = spindleSpeed;
     }
 }
