@@ -1,11 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
-
-public class VideoCard {
-    private static Logger log = LoggerFactory.getLogger(VideoCard.class.getName());
-    private int power;
+public class VideoCard extends Accessories {
     private String producer;
     private String ramSize;
 
@@ -18,20 +13,21 @@ public class VideoCard {
         this.ramSize = ramSize;
     }
 
+    @Override
+    public String toString() {
+        return "VideoCard{" +
+                "power= " + power+'\''+
+                "W, producer='" + producer + '\'' +
+                ", ramSize='" + ramSize + '\'' +
+                "Gb"+'}';
+    }
+
     public String getProducer() {
         return producer;
     }
 
     public void setProducer(String producer) {
         this.producer = producer;
-    }
-
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
     }
 
     public String getRamSize() {

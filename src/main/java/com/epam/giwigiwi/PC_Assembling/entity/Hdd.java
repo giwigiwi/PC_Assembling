@@ -1,11 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
-
-public class Hdd {
-    private static Logger log = LoggerFactory.getLogger(Hdd.class.getName());
-    private int power;
+public class Hdd extends Accessories {
     private String spindleSpeed;
 
     public Hdd() {
@@ -16,12 +11,12 @@ public class Hdd {
         this.spindleSpeed = rotateSpeed;
     }
 
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
+    @Override
+    public String toString() {
+        return "Hdd{" +
+                "power= " + power+'\''+
+                "W, spindleSpeed='" + spindleSpeed + '\'' +
+                "Rt/min "+'}';
     }
 
     public String getSpindleSpeed() {

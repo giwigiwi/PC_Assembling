@@ -1,11 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
-
-public class Ram {
-    private static Logger log = LoggerFactory.getLogger(Ram.class.getName());
-    private int power;
+public class Ram extends Accessories {
     private String clock;
     private String capacity;
 
@@ -18,12 +13,13 @@ public class Ram {
         this.capacity = capacity;
     }
 
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
+    @Override
+    public String toString() {
+        return "Ram{" +
+                "power= " + power+'\''+
+                "W, clock='" + clock + '\'' +
+                "MHz, capacity='" + capacity + '\'' +
+                "Gb "+'}';
     }
 
     public String getClock() {
@@ -41,4 +37,5 @@ public class Ram {
     public void setCapacity(String capacity) {
         this.capacity = capacity;
     }
+
 }

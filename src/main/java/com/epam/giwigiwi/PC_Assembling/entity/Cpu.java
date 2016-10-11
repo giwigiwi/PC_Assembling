@@ -1,11 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
-
-public class Cpu {
-    private static Logger log = LoggerFactory.getLogger(Cpu.class.getName());
-    private int power;
+public class Cpu extends Accessories{
     private String clock;
     private String bits;
 
@@ -18,12 +13,13 @@ public class Cpu {
         this.bits = bits;
     }
 
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
+    @Override
+    public String toString() {
+        return "Cpu{" +
+                "power= " + power+'\''+
+                "W, clock='" + clock + '\'' +
+                "MHz, bits='" + bits + '\'' +
+                '}';
     }
 
     public String getClock() {
@@ -41,5 +37,6 @@ public class Cpu {
     public void setBitCount(String bits) {
         this.bits = bits;
     }
+
 }
 
