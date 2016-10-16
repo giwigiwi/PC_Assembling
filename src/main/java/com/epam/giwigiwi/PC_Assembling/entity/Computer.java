@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
-import java.util.TreeSet;
 
 
 public class Computer extends Part {
@@ -16,7 +15,7 @@ public class Computer extends Part {
     }
 
     public Computer(ArrayList partsList, int powerSupply) {
-        this.partsList=partsList;
+        this.partsList = partsList;
         this.powerSupply = powerSupply;
         log.info("Your PC was successful assembling");
     }

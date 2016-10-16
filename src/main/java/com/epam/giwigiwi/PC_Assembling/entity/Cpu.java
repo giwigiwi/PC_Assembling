@@ -16,7 +16,7 @@ public class Cpu extends Part {
     @Override
     public String toString() {
         return "Cpu{" +
-                "power= " + power+'\''+
+                "power= " + power + '\'' +
                 "W, clock='" + clock + '\'' +
                 "MHz, bits='" + bits + '\'' +
                 '}';

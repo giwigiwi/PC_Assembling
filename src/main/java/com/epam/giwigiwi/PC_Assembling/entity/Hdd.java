@@ -30,9 +30,9 @@ public class Hdd extends Part {
     @Override
     public String toString() {
         return "Hdd{" +
-                "power= " + power+'\''+
+                "power= " + power + '\'' +
                 "W, spindleSpeed='" + spindleSpeed + '\'' +
-                "Rt/min "+'}';
+                "Rt/min " + '}';
     }
 
     public String getSpindleSpeed() {

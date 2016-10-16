@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
-import java.util.TreeSet;
 
 public class Pc_Factory {
     private static Logger log = LoggerFactory.getLogger(Pc_Factory.class.getName());
@@ -19,8 +18,8 @@ public class Pc_Factory {
             log.info("Power supply capacity is null");
         } else {
             int aggregatePower = 0;
-            for (Part partsList: compCase.getPartsList()) {
-                aggregatePower+=partsList.getPower();
+            for (Part partsList : compCase.getPartsList()) {
+                aggregatePower += partsList.getPower();
             }
             int result = powerSupplyCapacity - aggregatePower;
             if (powerSupplyCapacity > aggregatePower) {
@@ -30,7 +29,8 @@ public class Pc_Factory {
             }
         }
     }
-    public static Computer getNewPC(int vCardCount,int hddCount,int powerSupplyCapacity) {
+
+    public static Computer getNewPC(int vCardCount, int hddCount, int powerSupplyCapacity) {
         ArrayList<Part> compParts = new ArrayList<>();
         for (int i = 0; i < vCardCount; i++)
             compParts.add(getNewVcard());
@@ -45,13 +45,13 @@ public class Pc_Factory {
         int vCardsRange = (int) (Math.random() * 4);
         int hddRange = (int) (Math.random() * 4);
         ArrayList<Part> compParts = new ArrayList<>();
-        for (int i=0;i<=vCardsRange;i++)
-        compParts.add(getNewVcard());
-        for (int i=0;i<=hddRange;i++)
+        for (int i = 0; i <= vCardsRange; i++)
+            compParts.add(getNewVcard());
+        for (int i = 0; i <= hddRange; i++)
             compParts.add(getNewHdd());
         compParts.add(getNewCpu());
         compParts.add(getNewRam());
-        return new Computer(compParts,powerSupplyCapacity);
+        return new Computer(compParts, powerSupplyCapacity);
     }
 
     public static Hdd getNewHdd() {

@@ -1,6 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-public class VideoCard extends Part{
+public class VideoCard extends Part {
     private String producer;
     private String ramSize;
 
@@ -16,10 +16,10 @@ public class VideoCard extends Part{
     @Override
     public String toString() {
         return "VideoCard{" +
-                "power= " + power+'\''+
+                "power= " + power + '\'' +
                 "W, producer='" + producer + '\'' +
                 ", ramSize='" + ramSize + '\'' +
-                "Gb"+'}';
+                "Gb" + '}';
     }
 
     @Override

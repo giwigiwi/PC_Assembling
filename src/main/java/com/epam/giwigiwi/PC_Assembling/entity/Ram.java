@@ -16,10 +16,10 @@ public class Ram extends Part {
     @Override
     public String toString() {
         return "Ram{" +
-                "power= " + power+'\''+
+                "power= " + power + '\'' +
                 "W, clock='" + clock + '\'' +
                 "MHz, capacity='" + capacity + '\'' +
-                "Gb "+'}';
+                "Gb " + '}';
     }
 
     public String getClock() {
