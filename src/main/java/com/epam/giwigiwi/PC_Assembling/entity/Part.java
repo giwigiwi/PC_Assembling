@@ -1,6 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-public abstract class Accessories{
+public abstract class Part{
     protected int power;
 
     public int getPower() {
@@ -10,4 +10,5 @@ public abstract class Accessories{
     public void setPower(int power) {
         this.power = power;
     }
+
 }

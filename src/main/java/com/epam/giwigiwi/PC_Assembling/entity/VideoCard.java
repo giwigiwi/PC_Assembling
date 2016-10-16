@@ -1,6 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-public class VideoCard extends Accessories {
+public class VideoCard extends Part{
     private String producer;
     private String ramSize;
 
@@ -22,6 +22,25 @@ public class VideoCard extends Accessories {
                 "Gb"+'}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        VideoCard videoCard = (VideoCard) o;
+
+        if (producer != null ? !producer.equals(videoCard.producer) : videoCard.producer != null) return false;
+        return ramSize != null ? ramSize.equals(videoCard.ramSize) : videoCard.ramSize == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = producer != null ? producer.hashCode() : 0;
+        result = 31 * result + (ramSize != null ? ramSize.hashCode() : 0);
+        return result;
+    }
+
     public String getProducer() {
         return producer;
     }
@@ -37,4 +56,5 @@ public class VideoCard extends Accessories {
     public void setRamSize(String ramSize) {
         this.ramSize = ramSize;
     }
+
 }

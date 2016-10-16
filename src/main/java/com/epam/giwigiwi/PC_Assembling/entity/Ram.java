@@ -1,6 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-public class Ram extends Accessories {
+public class Ram extends Part {
     private String clock;
     private String capacity;
 

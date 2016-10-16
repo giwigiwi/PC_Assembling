@@ -1,6 +1,6 @@
 package com.epam.giwigiwi.PC_Assembling.entity;
 
-public class Cpu extends Accessories{
+public class Cpu extends Part {
     private String clock;
     private String bits;
 
